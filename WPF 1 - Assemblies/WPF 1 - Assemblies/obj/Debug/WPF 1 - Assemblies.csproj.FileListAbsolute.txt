@@ -1,0 +1,15 @@
+D:\ШАГ\Програмування\C# System programming\WPF 1 - Assemblies\WPF 1 - Assemblies\bin\Debug\WPF 1 - Assemblies.exe.config
+D:\ШАГ\Програмування\C# System programming\WPF 1 - Assemblies\WPF 1 - Assemblies\bin\Debug\WPF 1 - Assemblies.exe
+D:\ШАГ\Програмування\C# System programming\WPF 1 - Assemblies\WPF 1 - Assemblies\bin\Debug\WPF 1 - Assemblies.pdb
+D:\ШАГ\Програмування\C# System programming\WPF 1 - Assemblies\WPF 1 - Assemblies\obj\Debug\WPF 1 - Assemblies.csprojAssemblyReference.cache
+D:\ШАГ\Програмування\C# System programming\WPF 1 - Assemblies\WPF 1 - Assemblies\obj\Debug\MainWindow.g.cs
+D:\ШАГ\Програмування\C# System programming\WPF 1 - Assemblies\WPF 1 - Assemblies\obj\Debug\App.g.cs
+D:\ШАГ\Програмування\C# System programming\WPF 1 - Assemblies\WPF 1 - Assemblies\obj\Debug\WPF 1 - Assemblies_MarkupCompile.cache
+D:\ШАГ\Програмування\C# System programming\WPF 1 - Assemblies\WPF 1 - Assemblies\obj\Debug\WPF 1 - Assemblies_MarkupCompile.lref
+D:\ШАГ\Програмування\C# System programming\WPF 1 - Assemblies\WPF 1 - Assemblies\obj\Debug\MainWindow.baml
+D:\ШАГ\Програмування\C# System programming\WPF 1 - Assemblies\WPF 1 - Assemblies\obj\Debug\WPF 1 - Assemblies.g.resources
+D:\ШАГ\Програмування\C# System programming\WPF 1 - Assemblies\WPF 1 - Assemblies\obj\Debug\WPF_1___Assemblies.Properties.Resources.resources
+D:\ШАГ\Програмування\C# System programming\WPF 1 - Assemblies\WPF 1 - Assemblies\obj\Debug\WPF 1 - Assemblies.csproj.GenerateResource.cache
+D:\ШАГ\Програмування\C# System programming\WPF 1 - Assemblies\WPF 1 - Assemblies\obj\Debug\WPF 1 - Assemblies.csproj.CoreCompileInputs.cache
+D:\ШАГ\Програмування\C# System programming\WPF 1 - Assemblies\WPF 1 - Assemblies\obj\Debug\WPF 1 - Assemblies.exe
+D:\ШАГ\Програмування\C# System programming\WPF 1 - Assemblies\WPF 1 - Assemblies\obj\Debug\WPF 1 - Assemblies.pdb

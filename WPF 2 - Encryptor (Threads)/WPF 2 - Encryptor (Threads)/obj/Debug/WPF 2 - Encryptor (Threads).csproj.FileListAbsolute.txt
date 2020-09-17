@@ -1,0 +1,15 @@
+D:\ШАГ\Програмування\C# System programming\WPF 2 - Encryptor (Threads)\WPF 2 - Encryptor (Threads)\bin\Debug\WPF 2 - Encryptor (Threads).exe.config
+D:\ШАГ\Програмування\C# System programming\WPF 2 - Encryptor (Threads)\WPF 2 - Encryptor (Threads)\bin\Debug\WPF 2 - Encryptor (Threads).exe
+D:\ШАГ\Програмування\C# System programming\WPF 2 - Encryptor (Threads)\WPF 2 - Encryptor (Threads)\bin\Debug\WPF 2 - Encryptor (Threads).pdb
+D:\ШАГ\Програмування\C# System programming\WPF 2 - Encryptor (Threads)\WPF 2 - Encryptor (Threads)\obj\Debug\WPF 2 - Encryptor (Threads).csprojAssemblyReference.cache
+D:\ШАГ\Програмування\C# System programming\WPF 2 - Encryptor (Threads)\WPF 2 - Encryptor (Threads)\obj\Debug\MainWindow.g.cs
+D:\ШАГ\Програмування\C# System programming\WPF 2 - Encryptor (Threads)\WPF 2 - Encryptor (Threads)\obj\Debug\App.g.cs
+D:\ШАГ\Програмування\C# System programming\WPF 2 - Encryptor (Threads)\WPF 2 - Encryptor (Threads)\obj\Debug\WPF 2 - Encryptor (Threads)_MarkupCompile.cache
+D:\ШАГ\Програмування\C# System programming\WPF 2 - Encryptor (Threads)\WPF 2 - Encryptor (Threads)\obj\Debug\WPF 2 - Encryptor (Threads)_MarkupCompile.lref
+D:\ШАГ\Програмування\C# System programming\WPF 2 - Encryptor (Threads)\WPF 2 - Encryptor (Threads)\obj\Debug\MainWindow.baml
+D:\ШАГ\Програмування\C# System programming\WPF 2 - Encryptor (Threads)\WPF 2 - Encryptor (Threads)\obj\Debug\WPF 2 - Encryptor (Threads).g.resources
+D:\ШАГ\Програмування\C# System programming\WPF 2 - Encryptor (Threads)\WPF 2 - Encryptor (Threads)\obj\Debug\WPF_2___Encryptor__Threads_.Properties.Resources.resources
+D:\ШАГ\Програмування\C# System programming\WPF 2 - Encryptor (Threads)\WPF 2 - Encryptor (Threads)\obj\Debug\WPF 2 - Encryptor (Threads).csproj.GenerateResource.cache
+D:\ШАГ\Програмування\C# System programming\WPF 2 - Encryptor (Threads)\WPF 2 - Encryptor (Threads)\obj\Debug\WPF 2 - Encryptor (Threads).csproj.CoreCompileInputs.cache
+D:\ШАГ\Програмування\C# System programming\WPF 2 - Encryptor (Threads)\WPF 2 - Encryptor (Threads)\obj\Debug\WPF 2 - Encryptor (Threads).exe
+D:\ШАГ\Програмування\C# System programming\WPF 2 - Encryptor (Threads)\WPF 2 - Encryptor (Threads)\obj\Debug\WPF 2 - Encryptor (Threads).pdb

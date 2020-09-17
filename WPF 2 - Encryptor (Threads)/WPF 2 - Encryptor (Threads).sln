@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF 2 - Encryptor (Threads)", "WPF 2 - Encryptor (Threads)\WPF 2 - Encryptor (Threads).csproj", "{681EC144-49C5-4375-8463-0BEF23F0F28B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{681EC144-49C5-4375-8463-0BEF23F0F28B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{681EC144-49C5-4375-8463-0BEF23F0F28B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{681EC144-49C5-4375-8463-0BEF23F0F28B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{681EC144-49C5-4375-8463-0BEF23F0F28B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {777F8DCA-5015-4EDA-9C5C-636FA0938F77}
+	EndGlobalSection
+EndGlobal
