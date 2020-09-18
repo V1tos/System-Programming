@@ -26,10 +26,9 @@ namespace WPF_2___Encryptor__Threads_
         string textFromFile;
         string textResult;
         string fileName;
-        Thread encryptThread;
-        Thread decryptThread;
+        Thread cryptThread;
         Thread refreshThread;
-        int crypt;
+        Crypt crypt;
         
         public enum Crypt
         {
@@ -39,7 +38,6 @@ namespace WPF_2___Encryptor__Threads_
         public MainWindow()
         {
             InitializeComponent();
-            crypt = 0;
         }
 
         private void btnOpen_Click(object sender, RoutedEventArgs e)
@@ -67,37 +65,22 @@ namespace WPF_2___Encryptor__Threads_
         {
             crypt = SetTypeOfCrypt();
             string pbMax = textFromFile.Length.ToString();
-            switch (crypt)
-            {
-                case (int)Crypt.Encrypt:
-                    encryptThread = new Thread(EncryptText);
-                    encryptThread.Start(textFromFile);
-                    refreshThread = new Thread(RefreshPB);
-                    refreshThread.Start(pbMax);
-                    break;
-                case (int)Crypt.Decrypt:
-                    decryptThread = new Thread(DecryptText);
-                    decryptThread.Start(textFromFile);
-                    refreshThread = new Thread(RefreshPB);
-                    refreshThread.Start(pbMax);
-                    break;
-                default:
-                    break;
-            }
+
+            cryptThread = new Thread(CryptText);
+            cryptThread.Start(textFromFile);
+            refreshThread = new Thread(RefreshPB);
+            refreshThread.Start(pbMax);
         }
 
-        private int SetTypeOfCrypt()
+        private Crypt SetTypeOfCrypt()
         {
-            int crypt = 0;
             if (rbEncrypt.IsChecked == true)
-                crypt = (int)Crypt.Encrypt;
-            else if (rbDecrypt.IsChecked == true)
-                crypt = (int)Crypt.Decrypt;
-
-            return crypt;
+                return Crypt.Encrypt;
+            else
+                return Crypt.Decrypt;
         }
 
-        private void EncryptText(object textFromFile)
+        private void CryptText(object textFromFile)
         {
             ASCIIEncoding ascii = new ASCIIEncoding();
             byte[] textToBytes = ascii.GetBytes(textFromFile.ToString());
@@ -106,25 +89,10 @@ namespace WPF_2___Encryptor__Threads_
 
             for (int i = 0; i < textToBytes.Length; i++)
             {
-                textToBytes[i] += keyValue;
-            }
-
-            Dispatcher.Invoke(() =>
-            {
-                textResult = ascii.GetString(textToBytes);
-            });
-        }
-
-        private void DecryptText(object textFromFile)
-        {
-            ASCIIEncoding ascii = new ASCIIEncoding();
-            byte[] textToBytes = ascii.GetBytes(textFromFile.ToString());
-            byte keyValue = 0;
-            Dispatcher.Invoke(() => { keyValue = Byte.Parse(tbKey.Text); });
-
-            for (int i = 0; i < textToBytes.Length; i++)
-            {
-                textToBytes[i] -= keyValue;
+                if (crypt==Crypt.Encrypt)
+                    textToBytes[i] += keyValue;
+                else
+                    textToBytes[i] -= keyValue;
             }
 
             Dispatcher.Invoke(() =>
@@ -135,8 +103,6 @@ namespace WPF_2___Encryptor__Threads_
 
         private void RefreshPB(object pbMax)
         {
-            
-
             int max = int.Parse(pbMax.ToString());
             Dispatcher.Invoke(() => { pbCrypt.Minimum = 0; });
             Dispatcher.Invoke(() => { pbCrypt.Maximum = max; });
@@ -160,44 +126,26 @@ namespace WPF_2___Encryptor__Threads_
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            switch (crypt)
-            {
-                case (int)Crypt.Encrypt:
-                    SaveEncryptFile(textResult);
-                    break;
-                case (int)Crypt.Decrypt:
-                    SaveDecryptFile(textResult);
-                    break;
-                default:
-                    break;
-            }
+            Save(textResult);
         }
 
-
-        private void SaveEncryptFile(string textResult)
+        private void Save(string textResult)
         {
-            string path = $@"..\EncryptFiles\{fileName}-encrypt.txt";
+            string path;
+            if (crypt == Crypt.Encrypt)
+                path = $@"..\EncryptFiles\{fileName}-encrypt.txt";
+            else
+                path = $@"..\DecryptFiles\{fileName}-decrypt.txt";
 
             using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
             {
                 byte[] array = Encoding.Default.GetBytes(textResult);
                 fs.Write(array, 0, array.Length);
-                MessageBox.Show("Saved", "Encrypt", MessageBoxButton.OK);
+                if (crypt == Crypt.Encrypt)
+                    MessageBox.Show("Saved", "Encrypt", MessageBoxButton.OK);
+                else
+                    MessageBox.Show("Saved", "Decrypt", MessageBoxButton.OK);
             }
-
-        }
-
-        private void SaveDecryptFile(string textResult)
-        {
-            string path = $@"..\DecryptFiles\{fileName}-decrypt.txt";
-
-            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
-            {
-                byte[] array = Encoding.Default.GetBytes(textResult);
-                fs.Write(array, 0, array.Length);
-                MessageBox.Show("Saved", "Decrypt", MessageBoxButton.OK);
-            }
-
         }
     }
 }
