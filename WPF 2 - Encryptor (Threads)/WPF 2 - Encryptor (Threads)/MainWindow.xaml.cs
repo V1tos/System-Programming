@@ -64,12 +64,14 @@ namespace WPF_2___Encryptor__Threads_
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
             crypt = SetTypeOfCrypt();
-            string pbMax = textFromFile.Length.ToString();
+            int pbMax = textFromFile.Length;
+
+            List<string> vs = new List<string>();
 
             cryptThread = new Thread(CryptText);
             cryptThread.Start(textFromFile);
             refreshThread = new Thread(RefreshPB);
-            refreshThread.Start(pbMax);
+            refreshThread.Start(vs);
         }
 
         private Crypt SetTypeOfCrypt()
@@ -103,7 +105,7 @@ namespace WPF_2___Encryptor__Threads_
 
         private void RefreshPB(object pbMax)
         {
-            int max = int.Parse(pbMax.ToString());
+            var max = (int)pbMax;
             Dispatcher.Invoke(() => { pbCrypt.Minimum = 0; });
             Dispatcher.Invoke(() => { pbCrypt.Maximum = max; });
             for (int i = 0; i <= max; i++)

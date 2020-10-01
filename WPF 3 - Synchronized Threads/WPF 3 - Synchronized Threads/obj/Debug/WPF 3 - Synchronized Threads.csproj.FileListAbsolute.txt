@@ -1,0 +1,15 @@
+D:\ШАГ\Програмування\C# System programming\WPF 3 - Synchronized Threads\WPF 3 - Synchronized Threads\bin\Debug\WPF 3 - Synchronized Threads.exe.config
+D:\ШАГ\Програмування\C# System programming\WPF 3 - Synchronized Threads\WPF 3 - Synchronized Threads\bin\Debug\WPF 3 - Synchronized Threads.exe
+D:\ШАГ\Програмування\C# System programming\WPF 3 - Synchronized Threads\WPF 3 - Synchronized Threads\bin\Debug\WPF 3 - Synchronized Threads.pdb
+D:\ШАГ\Програмування\C# System programming\WPF 3 - Synchronized Threads\WPF 3 - Synchronized Threads\obj\Debug\WPF 3 - Synchronized Threads.csprojAssemblyReference.cache
+D:\ШАГ\Програмування\C# System programming\WPF 3 - Synchronized Threads\WPF 3 - Synchronized Threads\obj\Debug\MainWindow.g.cs
+D:\ШАГ\Програмування\C# System programming\WPF 3 - Synchronized Threads\WPF 3 - Synchronized Threads\obj\Debug\App.g.cs
+D:\ШАГ\Програмування\C# System programming\WPF 3 - Synchronized Threads\WPF 3 - Synchronized Threads\obj\Debug\WPF 3 - Synchronized Threads_MarkupCompile.cache
+D:\ШАГ\Програмування\C# System programming\WPF 3 - Synchronized Threads\WPF 3 - Synchronized Threads\obj\Debug\WPF 3 - Synchronized Threads_MarkupCompile.lref
+D:\ШАГ\Програмування\C# System programming\WPF 3 - Synchronized Threads\WPF 3 - Synchronized Threads\obj\Debug\MainWindow.baml
+D:\ШАГ\Програмування\C# System programming\WPF 3 - Synchronized Threads\WPF 3 - Synchronized Threads\obj\Debug\WPF 3 - Synchronized Threads.g.resources
+D:\ШАГ\Програмування\C# System programming\WPF 3 - Synchronized Threads\WPF 3 - Synchronized Threads\obj\Debug\WPF_3___Synchronized_Threads.Properties.Resources.resources
+D:\ШАГ\Програмування\C# System programming\WPF 3 - Synchronized Threads\WPF 3 - Synchronized Threads\obj\Debug\WPF 3 - Synchronized Threads.csproj.GenerateResource.cache
+D:\ШАГ\Програмування\C# System programming\WPF 3 - Synchronized Threads\WPF 3 - Synchronized Threads\obj\Debug\WPF 3 - Synchronized Threads.csproj.CoreCompileInputs.cache
+D:\ШАГ\Програмування\C# System programming\WPF 3 - Synchronized Threads\WPF 3 - Synchronized Threads\obj\Debug\WPF 3 - Synchronized Threads.exe
+D:\ШАГ\Програмування\C# System programming\WPF 3 - Synchronized Threads\WPF 3 - Synchronized Threads\obj\Debug\WPF 3 - Synchronized Threads.pdb

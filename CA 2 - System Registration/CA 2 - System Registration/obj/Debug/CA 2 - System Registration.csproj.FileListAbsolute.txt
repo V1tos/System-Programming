@@ -1,0 +1,7 @@
+D:\ШАГ\Програмування\C# System programming\CA 2 - System Registration\CA 2 - System Registration\obj\Debug\CA 2 - System Registration.csprojAssemblyReference.cache
+D:\ШАГ\Програмування\C# System programming\CA 2 - System Registration\CA 2 - System Registration\obj\Debug\CA 2 - System Registration.csproj.CoreCompileInputs.cache
+D:\ШАГ\Програмування\C# System programming\CA 2 - System Registration\CA 2 - System Registration\bin\Debug\CA 2 - System Registration.exe.config
+D:\ШАГ\Програмування\C# System programming\CA 2 - System Registration\CA 2 - System Registration\bin\Debug\CA 2 - System Registration.exe
+D:\ШАГ\Програмування\C# System programming\CA 2 - System Registration\CA 2 - System Registration\bin\Debug\CA 2 - System Registration.pdb
+D:\ШАГ\Програмування\C# System programming\CA 2 - System Registration\CA 2 - System Registration\obj\Debug\CA 2 - System Registration.exe
+D:\ШАГ\Програмування\C# System programming\CA 2 - System Registration\CA 2 - System Registration\obj\Debug\CA 2 - System Registration.pdb

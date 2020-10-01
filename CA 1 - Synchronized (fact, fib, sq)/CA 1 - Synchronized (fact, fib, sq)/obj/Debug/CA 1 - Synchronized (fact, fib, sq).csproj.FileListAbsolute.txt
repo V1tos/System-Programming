@@ -1,0 +1,7 @@
+D:\ШАГ\Програмування\C# System programming\CA 1 - Synchronized (fact, fib, sq)\CA 1 - Synchronized (fact, fib, sq)\obj\Debug\CA 1 - Synchronized (fact, fib, sq).csprojAssemblyReference.cache
+D:\ШАГ\Програмування\C# System programming\CA 1 - Synchronized (fact, fib, sq)\CA 1 - Synchronized (fact, fib, sq)\obj\Debug\CA 1 - Synchronized (fact, fib, sq).csproj.CoreCompileInputs.cache
+D:\ШАГ\Програмування\C# System programming\CA 1 - Synchronized (fact, fib, sq)\CA 1 - Synchronized (fact, fib, sq)\bin\Debug\CA 1 - Synchronized (fact, fib, sq).exe.config
+D:\ШАГ\Програмування\C# System programming\CA 1 - Synchronized (fact, fib, sq)\CA 1 - Synchronized (fact, fib, sq)\bin\Debug\CA 1 - Synchronized (fact, fib, sq).exe
+D:\ШАГ\Програмування\C# System programming\CA 1 - Synchronized (fact, fib, sq)\CA 1 - Synchronized (fact, fib, sq)\bin\Debug\CA 1 - Synchronized (fact, fib, sq).pdb
+D:\ШАГ\Програмування\C# System programming\CA 1 - Synchronized (fact, fib, sq)\CA 1 - Synchronized (fact, fib, sq)\obj\Debug\CA 1 - Synchronized (fact, fib, sq).exe
+D:\ШАГ\Програмування\C# System programming\CA 1 - Synchronized (fact, fib, sq)\CA 1 - Synchronized (fact, fib, sq)\obj\Debug\CA 1 - Synchronized (fact, fib, sq).pdb

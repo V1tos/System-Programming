@@ -1,0 +1,14 @@
+D:\ШАГ\Програмування\C# System programming\CA 3 - Dapper\CA 3 - Dapper\bin\Debug\CA 3 - Dapper.exe.config
+D:\ШАГ\Програмування\C# System programming\CA 3 - Dapper\CA 3 - Dapper\bin\Debug\CA 3 - Dapper.exe
+D:\ШАГ\Програмування\C# System programming\CA 3 - Dapper\CA 3 - Dapper\bin\Debug\CA 3 - Dapper.pdb
+D:\ШАГ\Програмування\C# System programming\CA 3 - Dapper\CA 3 - Dapper\bin\Debug\EntityFramework.dll
+D:\ШАГ\Програмування\C# System programming\CA 3 - Dapper\CA 3 - Dapper\bin\Debug\EntityFramework.SqlServer.dll
+D:\ШАГ\Програмування\C# System programming\CA 3 - Dapper\CA 3 - Dapper\bin\Debug\EntityFramework.xml
+D:\ШАГ\Програмування\C# System programming\CA 3 - Dapper\CA 3 - Dapper\bin\Debug\EntityFramework.SqlServer.xml
+D:\ШАГ\Програмування\C# System programming\CA 3 - Dapper\CA 3 - Dapper\obj\Debug\CA 3 - Dapper.csprojAssemblyReference.cache
+D:\ШАГ\Програмування\C# System programming\CA 3 - Dapper\CA 3 - Dapper\obj\Debug\CA 3 - Dapper.csproj.CoreCompileInputs.cache
+D:\ШАГ\Програмування\C# System programming\CA 3 - Dapper\CA 3 - Dapper\obj\Debug\CA 3 - Dapper.csproj.CopyComplete
+D:\ШАГ\Програмування\C# System programming\CA 3 - Dapper\CA 3 - Dapper\obj\Debug\CA 3 - Dapper.exe
+D:\ШАГ\Програмування\C# System programming\CA 3 - Dapper\CA 3 - Dapper\obj\Debug\CA 3 - Dapper.pdb
+D:\ШАГ\Програмування\C# System programming\CA 3 - Dapper\CA 3 - Dapper\bin\Debug\Dapper.dll
+D:\ШАГ\Програмування\C# System programming\CA 3 - Dapper\CA 3 - Dapper\bin\Debug\Dapper.xml

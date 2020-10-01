@@ -1,0 +1,23 @@
+﻿<Window x:Class="WPF_3___Synchronized_Threads.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_3___Synchronized_Threads"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnLoad" Content="Load directory" Click="btnLoad_Click" FontSize="20" Margin="10" Width="200" Height="50"></Button>
+        <ListBox x:Name="lbFiles" Grid.Row="1" Margin="10"/>
+        <Button x:Name="btnWrite" Grid.Column="1" Content="Write" Click="btnWrite_Click" FontSize="20" Margin="10" Width="200" Height="50"></Button>
+        <TextBox x:Name="tbTest" Grid.Column="1" Grid.Row="1" Margin="10"/>
+    </Grid>
+</Window>
