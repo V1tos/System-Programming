@@ -24,7 +24,7 @@ namespace WPF_3___Synchronized_Threads
     /// </summary>
     public partial class MainWindow : Window
     {
-        static string path = @"D:\FullText.txt";
+        static string path = @"..\Debug\FullText.txt";
         static string loadText="";
         static object locker = new object();
         Thread thread;
@@ -32,28 +32,6 @@ namespace WPF_3___Synchronized_Threads
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void btnOpen_Click(object sender, RoutedEventArgs e)
-        {
-            //OpenFileDialog dialog = new OpenFileDialog();
-            
-            //dialog.Filter = "text files (*.txt)|*.txt";
-            //if (dialog.ShowDialog() == true)
-            //{
-            //    string path = tbFileWay.Text = dialog.FileName;
-
-
-            //    int deleteIndex = dialog.SafeFileName.IndexOf('.');
-            //    fileName = dialog.SafeFileName.Remove(deleteIndex);
-
-            //    using (FileStream fs = File.OpenRead(path))
-            //    {
-            //        byte[] array = new byte[fs.Length];
-            //        fs.Read(array, 0, array.Length);
-            //        tbLoad.Text = textFromFile = Encoding.Default.GetString(array);
-            //    }
-            //}
         }
 
         private void btnLoad_Click(object sender, RoutedEventArgs e)
@@ -112,7 +90,7 @@ namespace WPF_3___Synchronized_Threads
                 {
                     byte[] array = new byte[fileStream.Length];
                     fileStream.Read(array, 0, array.Length);
-                    loadText += Encoding.Default.GetString(array);
+                    loadText += (Encoding.Default.GetString(array) + Environment.NewLine);
                 }
             }
         }

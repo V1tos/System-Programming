@@ -46,7 +46,7 @@ namespace WPF_1___Assemblies
                 lblResult.Content = assemblyName;
                 assembly = test.Load(assemblyName);
                 var classes = assembly.GetTypes();
-                lbAssemblies.ItemsSource = classes.Select(x=>x.Name);
+                lbAssemblies.ItemsSource = classes.Select(x => x.Name);
             }
         }
 
@@ -60,121 +60,139 @@ namespace WPF_1___Assemblies
             string path = $"{assemblyName}.{selectedClass}";
             var type = assembly.GetType(path);
             obj = Activator.CreateInstance(type);
-            lblResult.Content = obj.ToString();
             var methods = type.GetMethods();
+
+            lblResult.Content = obj.ToString();
+         
             foreach (var item in methods)
             {
                 lbMethods.Items.Add(item);
-                
             }
-            lbMethods.SelectionChanged += lbMethods_SelectionChanged;  
+
+            lbMethods.SelectionChanged += lbMethods_SelectionChanged;
         }
 
         private void lbMethods_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             spParameters.Children.Clear();
+            btnRunMethod.IsEnabled = true;
+
             selectedMethod = lbMethods.SelectedItem as MethodInfo;
-            var parametersCount = selectedMethod.GetParameters().Count();
-            lblResult.Content = "";
-
-            if (selectedMethod.ReturnType == typeof(void)&& parametersCount==0)
-                return;
-            FillStackPanel(spParameters);
-        }
-
-        private void FillStackPanel(StackPanel spParameters)
-        {
             var methodParameters = selectedMethod.GetParameters();
 
-            foreach (var item in methodParameters)
+            lblResult.Content = "";
+
+            if (selectedMethod.ReturnType == typeof(void) && methodParameters == null)
+                return;
+            UpdatePanel(spParameters, methodParameters);
+        }
+
+        private void UpdatePanel(Panel panel, params ParameterInfo[] parameters)
+        {
+            foreach (var parameter in parameters)
             {
                 Label label = new Label();
                 TextBox textBox = new TextBox();
 
                 label.VerticalAlignment = VerticalAlignment.Center;
-                label.Content = $"({item.ParameterType.Name} {item.Name})";
+                label.Content = $"({parameter.ParameterType.Name} {parameter.Name})";
                 textBox.Height = 30;
                 textBox.Width = 60;
                 textBox.VerticalContentAlignment = VerticalAlignment.Center;
 
-                spParameters.Children.Add(label);
-                spParameters.Children.Add(textBox);
+                panel.Children.Add(label);
+                panel.Children.Add(textBox);
             }
 
         }
 
         private void btnRun_Click(object sender, RoutedEventArgs e)
         {
-            var parametersCount = selectedMethod.GetParameters().Count();
+            object[] inputedParameters = null;
 
-            if (parametersCount == 0)
+            if (spParameters.Children.Count > 0)
             {
-                InvokeWithoutParams(selectedMethod);
+                var parameterTextBoxes = SelectTextBoxesFromPanel(spParameters.Children);
+                var tbValues = SelectValuesFromTextBoxes(parameterTextBoxes);
+                inputedParameters = GetParsedParameters(tbValues, selectedMethod);
             }
-            else
-            {              
-                var inputParameters = GetParametersFromPanel(spParameters.Children);
-                InvokeWithParams(selectedMethod, inputParameters);
-            }
+
+            InvokeMethod(selectedMethod, inputedParameters);
+            (sender as Button).IsEnabled = false;
         }
 
-        private void InvokeWithoutParams(MethodInfo selectedMethod)
+        private void InvokeMethod(MethodInfo method, object[] parameters)
         {
-            lblResult.Content = $"{ selectedMethod.Name}()";
-            if (selectedMethod.ReturnType == typeof(void))
-            {
-                selectedMethod.Invoke(obj, null);
-                return;
-            }
-
-            object result = selectedMethod.Invoke(obj, null);
-            if (result == null)
-            {
-                lblResult.Content += $" = null";
-                return;
-            }
-            lblResult.Content += $" = {result.ToString()}";
+            object result = method.Invoke(obj, parameters);
+            lblResult.Content = MethodResult(method, parameters, result).ToString();
         }
 
-        private void InvokeWithParams(MethodInfo selectedMethod, object[] inputParameters)
+        private object[] GetParsedParameters(object[] tbValues, MethodInfo method)
         {
-            lblResult.Content = $"{selectedMethod.Name} (";
-            foreach (var item in inputParameters)
+            var methodParameters = method.GetParameters();
+            var inputValues = new List<object>();
+
+            for (int i = 0; i < methodParameters.Length; i++)
             {
-                if (inputParameters.Length > 1)
+                if (methodParameters[i].ParameterType == typeof(int))
                 {
-                    lblResult.Content += $"{item.ToString()}, ";
+                    if (int.TryParse(tbValues[i].ToString(), out int temp))
+                        inputValues.Add(temp);
+                    else
+                        inputValues.Add(0);
                 }
-                else if (item == inputParameters[inputParameters.Length - 1])
+                else
                 {
-                    lblResult.Content += $"{item.ToString()})";
+                    inputValues.Add(tbValues[i].ToString());
                 }
             }
+            return inputValues.ToArray();
+        }
 
-            if (selectedMethod.ReturnType == typeof(void))
+
+
+        private object MethodResult(MethodInfo method, object[] parameters, object result)
+        {
+            string methodDescription = $"{method.Name} (";
+
+            if (parameters == null && result == null)
             {
-                selectedMethod.Invoke(obj, inputParameters);
+                if (method.ReturnType == typeof(void))
+                    methodDescription += ") executed";
+                else if (method.ReturnType != typeof(void) && parameters == null)
+                    methodDescription += ") = null";
+            }
+            else if (parameters == null && result != null)
+            {
+                methodDescription += $") = {result.ToString()}";
             }
             else
             {
-                object result = selectedMethod.Invoke(obj, inputParameters);
+                foreach (var item in parameters)
+                {
+                    if (item != parameters[parameters.Length - 1])
+                    {
+                        methodDescription += $"{item.ToString()}, ";
+                        continue;
+                    }
+                    methodDescription += $"{item.ToString()})";
+                }
                 if (result == null)
                 {
-                    lblResult.Content += " = null";
-                    return;
+                    if (method.ReturnType == typeof(void))
+                        methodDescription += " executed";
+                    else
+                        methodDescription += " = null";
                 }
-                lblResult.Content += $" = {result.ToString()}";
-            }        
+                else
+                {
+                    methodDescription += $" = {result.ToString()}";
+                }
+            }
+            return methodDescription as object;
         }
 
-
-        private object[] GetParametersFromPanel(UIElementCollection panelElements)
-        {
-            var textBoxes = GetTextBoxes(panelElements);
-            return GetValuesFromTextBoxes(textBoxes);
-        }
-
-        private TextBox[] GetTextBoxes(UIElementCollection panelElements)
+        private TextBox[] SelectTextBoxesFromPanel(UIElementCollection panelElements)
         {
             var textBoxes = new List<TextBox>();
 
@@ -189,11 +207,10 @@ namespace WPF_1___Assemblies
                 if (item.Text == "")
                     item.Text = "null";
             }
-
             return textBoxes.ToArray();
         }
 
-        private object[] GetValuesFromTextBoxes(TextBox[] textBoxes)
+        private object[] SelectValuesFromTextBoxes(TextBox[] textBoxes)
         {
             var methodParameters = selectedMethod.GetParameters();
             var inputValues = new List<object>();
@@ -212,6 +229,10 @@ namespace WPF_1___Assemblies
                 }
             }
             return inputValues.ToArray();
+        }
+        private object[] SelectValueFromTextBoxes1(TextBox[] textBoxes)
+        {
+            return (textBoxes.Select(x => x.Text) as object[]);
         }
     }
 }

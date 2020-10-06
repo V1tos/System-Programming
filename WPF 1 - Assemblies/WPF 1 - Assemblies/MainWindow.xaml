@@ -33,7 +33,7 @@
             <ListBox x:Name="lbMethods" SelectionChanged="lbMethods_SelectionChanged" Margin="10"/>
             <StackPanel  Grid.Row="1" x:Name="spParameters" Orientation="Horizontal">
             </StackPanel>
-            <Button x:Name="btnRunMethod" Content="Run" FontSize="20" Grid.Row="2" Margin="10" Width="200" Click="btnRun_Click"></Button>
+            <Button x:Name="btnRunMethod" Content="Run" FontSize="20" Grid.Row="2" Margin="10" Width="200" IsEnabled="False" Click="btnRun_Click"></Button>
             <Label Margin="10" Grid.Row="3" Content="Result:" FontSize="16" VerticalAlignment="Center"/>
             <Label x:Name="lblResult" Grid.Row="3" Content="Result" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
